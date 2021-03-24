@@ -18,7 +18,7 @@ class SalesPerson:
     def display_sales(self):
         print('----------------------------------------------------')
         print('Product Sold: ')
-        for product in self.product_sold:
+        for product in self.products_sold:
             print(product)
         print('----------------------------------------------------')
     def calculate_sales(self):
@@ -39,4 +39,4 @@ class SalesPerson:
         return f'The Number of products sold: {len(self.products_sold)}'
 
     def sort_by_price(self):
-        self.total_products_sold.sort(key=lambda product: product.price, reverse=True)
+        self.products_sold.sort(key=lambda product: product.price, reverse=True)

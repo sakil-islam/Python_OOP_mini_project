@@ -20,11 +20,15 @@ laptop_3 = Laptop('DELL', 56000, 1.4, 'Sliver', 16, 'intel Core i5', 1024)
 print(laptop_1)
 print(phone_1)
 
-#Applying the discount upon the products
+#Applying the discount upon the product
+phone_1.apply_discount()
+print(phone_1.price)
+
+#Total number of products
 print(Tech.get_total_products())
 
 #Shipping Cost
-print(Laptop.calculate_shipping_cost(10))
+print(laptop_3.calculate_shipping_cost(10))
 
 #Setting the double price for the 1st laptop
 print(laptop_1.price)
@@ -36,7 +40,12 @@ print(laptop_3)
 laptop_3.change_spaces(32, 1000)
 print(laptop_3)
 
-sales_person_1 = SalesPerson('MEHEDI', 'Hasan', 40000, date(2021,1,5))
+sales_person_1 = SalesPerson(
+    'MEHEDI',
+    'Hasan',
+    40000,
+    datetime(2021, 1, 5)
+)
 
 #Adding the products
 sales_person_1.sell_product(phone_1)
